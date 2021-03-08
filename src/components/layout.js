@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
+import Header from './headernavbar/header';
+import Navbar from './headernavbar/navbar';
+
 class Layout extends Component {
   render() {
     return (
-      <div className='app'>
-        <h1>Football Decals</h1>
+      <div className='layout'>
+        <Header />
+        <Navbar />
       </div>
     );
   }
