@@ -10,7 +10,13 @@ import history from "./history";
 import Signin from "./components/auth/signin";
 import Signup from "./components/auth/signup";
 
-const createStoreWithMiddleware = applyMiddleware()(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
+const createStoreWithMiddleware = applyMiddleware()(
+  compose(
+    (window.devToolsExtension ? window.devToolsExtension() : (f) => f)(
+      createStore
+    )
+  )
+);
 
 import "./style/main.scss";
 
@@ -18,11 +24,11 @@ function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <Router history={history}>
-        <Layout> 
+        <Layout>
           <Switch>
-            <Route path='/' exact component={Signin} />
-            <Route path='/signin' exact component={Signin} />
-            <Route path='/signup' exact component={Signup} />
+            <Route path="/" exact component={Signin} />
+            <Route path="/signin" exact component={Signin} />
+            <Route path="/signup" exact component={Signup} />
           </Switch>
         </Layout>
       </Router>

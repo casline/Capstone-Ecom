@@ -1,17 +1,17 @@
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-@import 'layout';
-@import 'headernavbar';
+@import "layout";
+@import "headernavbar";
 
-@import 'auth/signin';
-@import 'auth/signup';
+@import "auth/signin";
+@import "auth/signup";
