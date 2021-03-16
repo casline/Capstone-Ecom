@@ -12,17 +12,17 @@ class SignInForm extends Component {
     const links = [
       {
         _id: 0,
-        title: "Not registered? Create account here",
+        title: "Not registered ? Create account here",
         onClick: () => history.push("/signup"),
       },
       {
         _id: 1,
-        title: "Forgot account email?",
+        title: "Forgot account email ?",
         onClick: () => console.log("Create Email"),
       },
       {
         _id: 2,
-        title: "Forgot account password",
+        title: "Forgot account password ?",
         onClick: () => console.log("Create Password"),
       },
     ];
