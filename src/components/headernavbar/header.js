@@ -7,8 +7,8 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <img src={FootballDecal} />
-        <div className="navbar__links">
+        <img className="header__img" src={FootballDecal} />
+        <div className="header__links">
           {this.props.headerLinks.map((link, index) => {
             return (
               <a
