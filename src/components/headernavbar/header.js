@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 import FootballDecal from "../../../static/assets/auth/images/Football Decal Image.jpg";
 
@@ -7,9 +8,31 @@ class Header extends Component {
     return (
       <div className="header">
         <img src={FootballDecal} />
+        <div className="navbar__links">
+          {this.props.headerLinks.map((link, index) => {
+            return (
+              <a
+                className="header__link"
+                key={index}
+                onClick={() => console.log("trying to switch tab")}
+              >
+                {link.title}
+              </a>
+            );
+          })}
+        </div>
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  const { headerLinks } = state.headerNavbar;
+  return {
+    headerLinks,
+  };
+}
+
+Header = connect(mapStateToProps)(Header);
 
 export default Header;
