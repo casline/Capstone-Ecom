@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import history from "../../history";
 
 import FootballDecal from "../../../static/assets/auth/images/Football Decal Image.jpg";
 
@@ -14,7 +15,7 @@ class Header extends Component {
               <a
                 className="header__link"
                 key={index}
-                onClick={() => console.log("trying to switch tab")}
+                onClick={() => history.push(link.path)}
               >
                 {link.title}
               </a>

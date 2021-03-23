@@ -67,7 +67,7 @@ class SignUpForm extends Component {
           component={FormButton}
         />
         <Field
-          className="sign-in-form__back"
+          className="sign-up-form__back"
           onClick={() => history.push("/signin")}
           type="button"
           title="Back"
