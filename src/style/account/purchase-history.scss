@@ -1,5 +1,9 @@
 .purchase-history {
-  font-size: 30px;
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 37px 0;
+  }
   &__page-title {
     border-bottom: 1px solid #cccccc;
   }
@@ -9,9 +13,12 @@
 }
 
 .purchases {
-  font-size: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 80px);
+  gap: 10px;
+  width: 360px;
 }
 
 .purchase-detail {
-  font-size: 30px;
+  font-size: 18px;
 }
