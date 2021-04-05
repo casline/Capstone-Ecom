@@ -1,10 +1,11 @@
 .form-input {
   display: grid;
-  gap: 6.5px;
+  grid-gap: 6.5px;
 
   & > * {
     padding-left: 20px;
   }
+
   &__label {
     font-size: 14px;
   }
@@ -29,11 +30,10 @@
     height: 38px;
     width: 243px;
     border-radius: 20px;
-    background-color: #2c5fbe;
+    background-color: #00cb79;
 
     font-size: 16px;
     color: white;
-    text-decoration: none;
     cursor: pointer;
 
     &:focus {
@@ -42,13 +42,37 @@
   }
 
   &__gray-button {
-    background: #999999;
+    background: #999;
     width: 137px;
-    text-decoration: none;
     cursor: pointer;
 
     &:focus {
       outline: none;
     }
+  }
+}
+
+.form-button-long-gray {
+  display: grid;
+  grid-gap: 6.5px;
+
+  &__button {
+    height: 38px;
+    width: 243px;
+    border-radius: 20px;
+    background-color: #999;
+    cursor: pointer;
+
+    font-size: 16px;
+    color: white;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__label {
+    padding-left: 20px;
+    font-size: 14px;
   }
 }
