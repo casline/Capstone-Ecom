@@ -13,10 +13,11 @@ class Shop extends Component {
       },
     ];
     this.props.setHeaderLinks(headerLinks);
-    // fetch shop products action creator
+    this.props.fetchShopCategories();
     // fetch navbar links
     // set the navbar links
     // filter products with links
+    // fetch shop products action creator
   }
   render() {
     return (
