@@ -1,8 +1,43 @@
 .quantity {
+  display: grid;
+  grid-template-rows: [s] 21px [m] 21px [e];
+  grid-template-columns: [s] 65px [m] 29px [e];
+
+  &__count,
+  &__plus,
+  &__minus {
+    border: 1px solid #e6e6e6;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-column: m/e;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background-color: #b6c6df;
+    }
+  }
   &__count {
+    grid-row: s/e;
+    grid-column: s/m;
+    height: 42px;
+    width: 65px;
+    border-radius: 3px 0 0 3px;
+    font-size: 23px;
+    color: #333333;
+    cursor: pointer;
   }
   &__plus {
+    grid-row: s/m;
+    height: 21px;
+    width: 29px;
+    border-radius: 0 3px 0 0;
+    cursor: pointer;
   }
   &__minus {
+    grid-row: m/e;
+    height: 21px;
+    width: 29px;
+    border-radius: 0 0 3px 0;
+    cursor: pointer;
   }
 }
