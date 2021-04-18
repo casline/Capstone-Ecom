@@ -9,7 +9,11 @@
   &__label {
     font-size: 14px;
   }
+
   &__input {
+    border: none;
+    appearance: none;
+    background: #f2f2f2;
     box-sizing: border-box;
     height: 39px;
     width: 426px;
@@ -30,7 +34,7 @@
     height: 38px;
     width: 243px;
     border-radius: 20px;
-    background-color: #00cb79;
+    background-color: #999;
 
     font-size: 16px;
     color: white;
