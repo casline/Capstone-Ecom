@@ -43,5 +43,17 @@
   width: 76px;
 }
 
-// .cart-content {
-// }
+.cart-content {
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Titillium Web";
+    color: #e6e6e6;
+  }
+  &__title {
+    display: grid;
+  }
+  &__products {
+    display: grid;
+  }
+}
