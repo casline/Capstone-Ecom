@@ -14,7 +14,9 @@ function CartButton({ className, icon }) {
 
 function CartContent({ className, products }) {
   let count = products.length;
-  let productJSX = products.map((product) => <CartProduct key={product._id} />);
+  let productJSX = products.map((product) => (
+    <CartProduct {...product} key={product._id} />
+  ));
   return (
     <div className={`${className} cart-content`}>
       <div className="cart-content__title">Cart ({count})</div>
