@@ -39,7 +39,23 @@ class ShopCart extends Component {
         <CartButton className="shop-cart__toggle" icon="fas fa-times" />
         <CartContent
           className="shop-cart__content"
-          products={[123, 456, 789]}
+          products={[
+            123,
+            456,
+            789,
+            123,
+            456,
+            789,
+            123,
+            456,
+            789,
+            123,
+            456,
+            789,
+            123,
+            456,
+            789,
+          ]}
         />
       </div>
     );
