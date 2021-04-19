@@ -1,0 +1,17 @@
+@mixin page-title {
+  grid-row: content-s/content-e;
+  grid-column: s/e;
+}
+
+@mixin shop-buttons {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(0.97);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  &:focus {
+    outline: none;
+  }
+}

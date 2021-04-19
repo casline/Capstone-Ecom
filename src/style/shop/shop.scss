@@ -1,6 +1,5 @@
 .shop {
-  grid-row: content-s/content-e;
-  grid-column: s/e;
+  @include page-title();
 
   display: grid;
   grid-template-rows: 30px [search-bar-s] 38px [search-bar-e product-s] 1fr [product-e];

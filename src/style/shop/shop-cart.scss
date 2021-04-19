@@ -18,8 +18,8 @@
     grid-row: con-s/con-e;
     grid-column: s/e;
 
-    display: grid;
-    justify-self: end;
+    // display: grid;
+    // justify-self: end;
   }
 }
 
@@ -55,5 +55,25 @@
   }
   &__products {
     display: grid;
+  }
+}
+
+.cart-footer {
+  &__checkout {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    height: 38px;
+    width: 183px;
+    border-radius: 20px;
+    background-color: $gray;
+    cursor: pointer;
+
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    @include shop-buttons();
   }
 }

@@ -115,14 +115,6 @@
     align-items: center;
     cursor: pointer;
 
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: scale(0.97);
-    }
-
-    &:active {
-      transform: scale(0.95);
-    }
+    @include shop-buttons();
   }
 }
