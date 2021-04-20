@@ -75,7 +75,7 @@
   &__title {
     grid-row: title-s/title-e;
 
-    color: #999;
+    color: $gray;
     font-family: "Encode Sans Condensed";
     font-size: 16px;
     font-weight: 500;
@@ -104,7 +104,7 @@
     width: 97px;
     border-radius: 20px;
     color: white;
-    background-color: #999;
+    background-color: $gray;
     font-weight: 600;
     font-size: 12px;
 

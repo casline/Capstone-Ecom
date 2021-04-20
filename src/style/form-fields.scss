@@ -34,7 +34,7 @@
     height: 38px;
     width: 243px;
     border-radius: 20px;
-    background-color: #999;
+    background-color: $gray;
 
     font-size: 16px;
     color: white;
@@ -46,7 +46,7 @@
   }
 
   &__gray-button {
-    background: #999;
+    background: $gray;
     width: 137px;
     cursor: pointer;
 
@@ -64,7 +64,7 @@
     height: 38px;
     width: 243px;
     border-radius: 20px;
-    background-color: #999;
+    background-color: $gray;
     cursor: pointer;
 
     font-size: 16px;
