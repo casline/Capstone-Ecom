@@ -5,24 +5,15 @@ import QuantityCounter from "../quantityCounter";
 import FootballDecal from "../../../static/assets/auth/images/Football Decal Image.jpg";
 
 class ShopProduct extends Component {
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     shopProductClass: "",
-  //   };
-  // }
-
-  // handleMouseEnter() {
-  //   this.setState({
-  //     shopProductClass: "image-blur",
-  //   });
-  // }
-  // handleMouseLeave() {
-  //   this.setState({
-  //     shopProductClass: "",
-  //   });
-  // }
+  handleAddToCart = () => {
+    if (
+      document.getElementById("shop-cart").classList.contains("cart-hidden")
+    ) {
+      document.getElementById("shop-cart").classList.remove("cart-hidden");
+    } else {
+      document.getElementById("shop-cart").classList.add("cart-hidden");
+    }
+  };
   render() {
     const { _id, title, description, price } = this.props;
     return (
@@ -39,7 +30,12 @@ class ShopProduct extends Component {
             className="shop-product__back__quantity"
             quantity={1}
           />
-          <div className="shop-product__back__add-to-cart">Add To Cart</div>
+          <a
+            onClick={this.handleAddToCart}
+            className="shop-product__back__add-to-cart"
+          >
+            Add To Cart
+          </a>
         </div>
       </div>
     );

@@ -2,10 +2,10 @@
   @include page-title();
 
   display: grid;
-  grid-template-rows: 30px [search-bar-s] 38px [search-bar-e product-s] 1fr [product-e];
+  grid-template-rows: 30px [search-bar-s] 38px [search-bar-e] 57px [product-s] 1fr [product-e];
   grid-template-columns: [s] 1fr [e];
   justify-content: center;
-  gap: 57px;
+  // gap: 57px;
 
   &__search-bar {
     grid-row: search-bar-s/search-bar-e;
@@ -19,5 +19,16 @@
     column-gap: 20px;
     row-gap: 40px;
     justify-content: center;
+  }
+
+  &__cart-button {
+    z-index: 5;
+  }
+
+  &__cart,
+  &__cart-button {
+    position: absolute;
+    top: 130px;
+    right: 0px;
   }
 }

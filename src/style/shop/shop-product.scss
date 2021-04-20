@@ -46,9 +46,7 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  &__image {
-    color: rgb(202, 27, 79);
-  }
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 
   &__title {
     color: #333333;
@@ -61,7 +59,7 @@
 .shop-product__back {
   height: 314px;
   width: 240px;
-  background-color: white;
+  background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
 
   display: grid;

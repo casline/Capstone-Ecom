@@ -15,13 +15,14 @@ body {
   color: #808080;
 }
 
+@import "variables";
+@import "mixins";
+
 @import "layout";
 @import "headernavbar";
 @import "page-title";
 @import "form-fields";
 @import "details";
-@import "mixins";
-@import "variables";
 
 // AUTH
 @import "auth/signin";
