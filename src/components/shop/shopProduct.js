@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import GrayPriceTag from "../grayPriceTag";
 import QuantityCounter from "../quantityCounter";
 
+import * as actions from "../../actions";
+import { connect } from "react-redux";
+
 import FootballDecal from "../../../static/assets/auth/images/Football Decal Image.jpg";
 
 class ShopProduct extends Component {
@@ -10,6 +13,8 @@ class ShopProduct extends Component {
       document.getElementById("shop-cart").classList.contains("cart-hidden")
     ) {
       document.getElementById("shop-cart").classList.remove("cart-hidden");
+      const { _id, title, description, price, belongsTo } = this.props;
+      this.props.addCartProduct({ _id, title, description, price, belongsTo });
     } else {
       document.getElementById("shop-cart").classList.add("cart-hidden");
     }
@@ -41,5 +46,7 @@ class ShopProduct extends Component {
     );
   }
 }
+
+ShopProduct = connect(null, actions)(ShopProduct);
 
 export default ShopProduct;
