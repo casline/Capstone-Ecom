@@ -67,6 +67,7 @@ export function fetchShopProducts() {
           "With these sets , you can choose a multi-colored design and show off decals with a multitude of colors and design options.",
         price: 2.99,
         belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 1,
@@ -75,6 +76,7 @@ export function fetchShopProducts() {
           "With these decals , you can choose a multitude of black only decals that will give your design a destictive pop. Also comes in matte finish.",
         price: 1.99,
         belongsTo: [0, 2],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 2,
@@ -83,6 +85,7 @@ export function fetchShopProducts() {
           "With these decals , you can choose a multitude of green only decals that will give your design a destictive pop. Also comes in matte finish.",
         price: 1.99,
         belongsTo: [0, 3],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 3,
@@ -91,6 +94,7 @@ export function fetchShopProducts() {
           "With these decals , you can choose a multitude of orange only decals that will give your design a destictive pop. Also comes in matte finish.",
         price: 1.99,
         belongsTo: [0, 4],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 4,
@@ -99,6 +103,7 @@ export function fetchShopProducts() {
           "With these decals , you can choose a multitude of purple only decals that will give your design a destictive pop. Also comes in matte finish.",
         price: 1.99,
         belongsTo: [0, 5],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 5,
@@ -107,6 +112,7 @@ export function fetchShopProducts() {
           "With these decals , you can choose a multitude of custom decals that will allow you to design a custom look using any given color or material needed to give you the design your looking for.",
         price: 3.99,
         belongsTo: [0, 6],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
     ],
   };
