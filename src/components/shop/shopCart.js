@@ -9,13 +9,13 @@ import history from "../../history";
 
 function CartContent({ className, products }) {
   let count = products.length;
-  let productJSX = products.map((product) => (
+  let productsJSX = products.map((product) => (
     <CartProduct {...product} key={product._id} />
   ));
   return (
     <div className={`${className} cart-content`}>
       <div className="cart-content__title">Cart ({count})</div>
-      <div className="cart-content__products">{productJSX}</div>
+      <div className="cart-content__products">{productsJSX}</div>
       <CartFooter className="cart-content__footer" products={products} />
     </div>
   );
@@ -29,7 +29,7 @@ function CartFooter({ className, products }) {
   return (
     <div className={`${className} cart-footer`}>
       <a
-        onClick={() => history.push("order-review")}
+        onClick={() => history.push("/order-review")}
         className="cart-footer__checkout"
       >
         Checkout

@@ -42,10 +42,18 @@
   &__back {
     grid-row: buttons-s/buttons-e;
     grid-column: back-s/back/e;
+    transform: translateY(-10px);
   }
   &__use-this-address {
     grid-row: buttons-s/buttons-e;
+    justify-self: end;
     grid-column: use-this-address-s/use-this-address-e;
+    transform: translateY(-10px);
+  }
+  &__order-summary {
+    grid-row: name-s;
+    grid-column: use-this-address-e/-1;
+    justify-self: end;
   }
 }
 
