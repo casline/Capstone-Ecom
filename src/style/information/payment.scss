@@ -70,6 +70,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 30px 24px 24px;
   row-gap: 5px;
+  font-size: 14px;
 
   & > * {
     grid-column: 1/-1;

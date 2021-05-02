@@ -40,7 +40,7 @@ class PaymentForm extends Component {
           className="payment-form__ccv"
           type="ccv"
           title="CCV"
-          placeholder="CCV"
+          placeholder="3 Digit Code"
           name="ccv"
           component={FormInput}
         />
@@ -70,7 +70,7 @@ class PaymentForm extends Component {
           />
           <div className="shipping-info__name small text">Caleb Schafrath</div>
           <div className="shipping-info__address small text">
-            Address goes here
+            1234 West Point Street
           </div>
         </div>
       </form>

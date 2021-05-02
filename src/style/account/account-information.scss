@@ -84,10 +84,12 @@
   &__cancel {
     grid-column: cancel-s/cancel-e;
     grid-row: buttons-s/buttons-e;
+    transform: translateY(-10px);
   }
 
   &__update-information {
     grid-column: update-s/update-e;
     grid-row: buttons-s/buttons-e;
+    transform: translateY(-10px);
   }
 }

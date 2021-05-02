@@ -42,10 +42,12 @@
   &__login {
     grid-row: buttons-s/buttons-e;
     grid-column: create-s/create-e;
+    transform: translateY(-10px);
   }
   &__back {
     grid-row: buttons-s/buttons-e;
     grid-column: back-s/back-e;
+    transform: translateY(-10px);
   }
   &__details {
     grid-row: 1/-1;
