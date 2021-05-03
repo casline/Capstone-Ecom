@@ -16,6 +16,13 @@ class Review extends Component {
     };
 
     this.handleNewReviewClick = this.handleNewReviewClick.bind(this);
+    this.handleModalClose = this.handleModalClose.bind(this);
+  }
+
+  handleModalClose() {
+    this.setState({
+      reviewModalIsOpen: false,
+    });
   }
 
   handleNewReviewClick() {
@@ -38,7 +45,10 @@ class Review extends Component {
     });
     return (
       <div className="review">
-        <ReviewModal modalIsOpen={this.state.reviewModalIsOpen} />
+        <ReviewModal
+          handleModalClose={this.handleModalClose}
+          modalIsOpen={this.state.reviewModalIsOpen}
+        />
         <div className="new-review-link">
           <a onClick={this.handleNewReviewClick}>Open Modal!</a>
         </div>
