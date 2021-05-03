@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ReactModal from "react-modal";
 
+ReactModal.setAppElement(".app-wrapper");
+
 class ReviewModal extends Component {
   constructor(props) {
     super(props);
