@@ -7,7 +7,7 @@ class ReviewModal extends Component {
   }
   render() {
     return (
-      <ReactModal isOpen={true}>
+      <ReactModal isOpen={this.props.modalIsOpen}>
         <h1>Coding in progress</h1>
       </ReactModal>
     );
