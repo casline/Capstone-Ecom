@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 import * as actions from "../../actions";
+import ReviewModal from "../modals/review-modal";
 
 import PageTitle from "../pageTitle";
 import ReviewForm from "./reviewForm";
@@ -22,6 +23,7 @@ class Review extends Component {
     });
     return (
       <div className="review">
+        <ReviewModal />
         <PageTitle className="review__page-title" title="Order Review" />
         <ReviewForm
           className="review__form"
