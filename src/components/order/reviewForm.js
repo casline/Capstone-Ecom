@@ -4,9 +4,32 @@ import { reduxForm, Field } from "redux-form";
 import history from "../../history";
 
 import { FormButton } from "../formFields";
+import ReviewModal from "../modals/review-modal";
 import ReviewProducts from "./reviewProducts";
 
 class ReviewForm extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      reviewModalIsOpen: false,
+    };
+
+    this.handleNewReviewClick = this.handleNewReviewClick.bind(this);
+    this.handleModalClose = this.handleModalClose.bind(this);
+  }
+
+  handleModalClose() {
+    this.setState({
+      reviewModalIsOpen: false,
+    });
+  }
+
+  handleNewReviewClick() {
+    this.setState({
+      reviewModalIsOpen: true,
+    });
+  }
   render() {
     const { className, handleSubmit, subtotal } = this.props;
     let tax = 0.16;
@@ -20,9 +43,13 @@ class ReviewForm extends Component {
         </div>
         <ReviewProducts className="review-form__products" />
         <div className="review-form__line"></div>
+        <ReviewModal
+          handleModalClose={this.handleModalClose}
+          modalIsOpen={this.state.reviewModalIsOpen}
+        />
         <Field
           className="review-form__proceed"
-          onClick={() => history.push("/information-shipping")}
+          onClick={this.handleNewReviewClick}
           type="submit"
           title="Proceed to Checkout"
           name="proceed"

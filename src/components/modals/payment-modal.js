@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import ReactModal from "react-modal";
 
-import ModalReview from "../order/modalReview";
+import ModalPayment from "../information/modalPayment";
 
 ReactModal.setAppElement(".app-wrapper");
 
-class ReviewModal extends Component {
+class PaymentModal extends Component {
   constructor(props) {
     super(props);
 
@@ -32,10 +32,10 @@ class ReviewModal extends Component {
         }}
         isOpen={this.props.modalIsOpen}
       >
-        <ModalReview />
+        <ModalPayment />
       </ReactModal>
     );
   }
 }
 
-export default ReviewModal;
+export default PaymentModal;

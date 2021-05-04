@@ -7,7 +7,31 @@ import { FormInput, FormButton } from "../formFields";
 import history from "../../history";
 import OrderSummary from "./orderSummary";
 
+import ShippingModal from "../modals/shipping-modal";
+
 class ShippingForm extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      reviewModalIsOpen: false,
+    };
+
+    this.handleNewReviewClick = this.handleNewReviewClick.bind(this);
+    this.handleModalClose = this.handleModalClose.bind(this);
+  }
+
+  handleModalClose() {
+    this.setState({
+      reviewModalIsOpen: false,
+    });
+  }
+
+  handleNewReviewClick() {
+    this.setState({
+      reviewModalIsOpen: true,
+    });
+  }
   render() {
     const { className, handleSubmit } = this.props;
     return (
@@ -54,9 +78,13 @@ class ShippingForm extends Component {
         />
 
         <div className="shipping-form__line"></div>
+        <ShippingModal
+          handleModalClose={this.handleModalClose}
+          modalIsOpen={this.state.reviewModalIsOpen}
+        />
         <Field
           className="shipping-form__use-this-address"
-          onClick={() => history.push("/information-payment")}
+          onClick={this.handleNewReviewClick}
           type="submit"
           title="Use This Address"
           name="use-this-address"
@@ -64,7 +92,7 @@ class ShippingForm extends Component {
         />
         <Field
           className="shipping-form__back"
-          onClick={() => history.push("/signin")}
+          onClick={() => history.push("/shop")}
           type="button"
           title="Back"
           name="back"

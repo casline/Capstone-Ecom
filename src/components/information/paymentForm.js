@@ -7,8 +7,31 @@ import { connect } from "react-redux";
 import { FormInput, FormButton } from "../formFields";
 import { UnderlinedTitle } from "./infoHelp";
 import OrderSummary from "./orderSummary";
+import PaymentModal from "../modals/payment-modal";
 
 class PaymentForm extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      reviewModalIsOpen: false,
+    };
+
+    this.handleNewReviewClick = this.handleNewReviewClick.bind(this);
+    this.handleModalClose = this.handleModalClose.bind(this);
+  }
+
+  handleModalClose() {
+    this.setState({
+      reviewModalIsOpen: false,
+    });
+  }
+
+  handleNewReviewClick() {
+    this.setState({
+      reviewModalIsOpen: true,
+    });
+  }
   render() {
     const { className, handleSubmit } = this.props;
     return (
@@ -46,9 +69,13 @@ class PaymentForm extends Component {
           component={FormInput}
         />
         <div className="payment-form__line"></div>
+        <PaymentModal
+          handleModalClose={this.handleModalClose}
+          modalIsOpen={this.state.reviewModalIsOpen}
+        />
         <Field
           className="payment-form__pay-complete"
-          onClick={() => history.push("/information-payment")}
+          onClick={this.handleNewReviewClick}
           type="submit"
           title="Pay & Complete"
           name="pay-complete"
@@ -56,7 +83,7 @@ class PaymentForm extends Component {
         />
         <Field
           className="payment-form__back"
-          onClick={() => history.push("/signin")}
+          onClick={() => history.push("/shop")}
           type="button"
           title="Back"
           name="back"
