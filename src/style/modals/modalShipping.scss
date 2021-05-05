@@ -1,0 +1,33 @@
+.shipping-modal {
+  display: grid;
+  grid-template-columns: [s] 1fr [e];
+  grid-template-rows: [header-s] 1fr [header-e content-s] 1fr [content-e save-address-s] 1fr [save-address-e back-s] 1fr [back-e];
+  align-items: center;
+  color: $gray;
+  background-color: #f6f6f6;
+  &__text {
+    font-size: 20px;
+  }
+  &__header {
+    grid-column: s/e;
+    grid-row: header-s/header-e;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+  }
+  &__content {
+    grid-column: s/e;
+    grid-row: contnet-s/contnet-e;
+    text-align: center;
+  }
+  &__save-address {
+    grid-column: 1/-1;
+    grid-row: proceed-s/proceed-e;
+    transform: translateX(280px);
+  }
+  &__back {
+    grid-column: s/e;
+    grid-row: back-s/back-e;
+    transform: translateX(338px);
+  }
+}

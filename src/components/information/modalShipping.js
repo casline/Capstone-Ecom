@@ -11,18 +11,18 @@ class ModalShipping extends Component {
     return (
       <form onSubmit={handleSubmit} className={`${className} shipping-modal`}>
         <div className="shipping-modal__text">
-          <h1>Save Address</h1>
-          <h3>
+          <div className="shipping-modal__header">Save Address</div>
+          <div className="shipping-modal__content">
             Would you like to save this address on file for future purchases
             with Football Decals ?
-          </h3>
+          </div>
         </div>
         <Field
-          className="shipping-modal__proceed"
+          className="shipping-modal__save-address"
           onClick={() => history.push("/information-payment")}
           type="submit"
           title="Save Address"
-          name="proceed"
+          name="save-address"
           component={FormButton}
         />
         <Field
