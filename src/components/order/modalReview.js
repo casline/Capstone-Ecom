@@ -11,17 +11,17 @@ class ModalReview extends Component {
     return (
       <form onSubmit={handleSubmit} className={`${className} review-modal`}>
         <div className="review-modal__text">
-          <h1>Thank You !!</h1>
-          <h3>
-            To continue with this purchase select the button below to move to
-            shipping inforamtion or select back to update items in cart.
-          </h3>
+          <div className="review-modal__header">Thank You !!</div>
+          <div className="review-modal__body">
+            To continue, select the proceed button below to move to shipping
+            information or select back to update items in cart.
+          </div>
         </div>
         <Field
           className="review-modal__proceed"
           onClick={() => history.push("/information-shipping")}
           type="submit"
-          title="Proceed to Checkout"
+          title="Proceed"
           name="proceed"
           component={FormButton}
         />
