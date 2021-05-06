@@ -1,10 +1,7 @@
 .shipping-modal {
-  display: grid;
+  @include modal-layout();
   grid-template-columns: [s] 1fr [e];
   grid-template-rows: [header-s] 1fr [header-e content-s] 1fr [content-e save-address-s] 1fr [save-address-e back-s] 1fr [back-e];
-  align-items: center;
-  color: $gray;
-  background-color: #f6f6f6;
   &__text {
     font-size: 20px;
   }

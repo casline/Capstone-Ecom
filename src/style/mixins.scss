@@ -15,3 +15,10 @@
     outline: none;
   }
 }
+
+@mixin modal-layout {
+  display: grid;
+  align-items: center;
+  color: $gray;
+  background-color: $off-white;
+}

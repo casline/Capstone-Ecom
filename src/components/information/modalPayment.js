@@ -11,13 +11,13 @@ class ModalPayment extends Component {
     return (
       <form onSubmit={handleSubmit} className={`${className} payment-modal`}>
         <div className="payment-modal__text">
-          <h1>Thank You !!</h1>
-          <h3>
-            Your order number is: A95362716 We've recieved your order and it
-            will be fullfilled and shipped within the next business day. Login
-            to your account for purchase history and orders shipping
+          <div className="payment-modal__header">Thank You !!</div>
+          <div className="payment-modal__body">
+            Your order number is: A95362716 <br></br>We've recieved your order
+            and it will be fullfilled and shipped within the next business day.
+            Login to your account for purchase history and orders shipping
             information.
-          </h3>
+          </div>
         </div>
         <Field
           className="payment-modal__proceed"
